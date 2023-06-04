@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RequestController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +26,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/categories', function () {
+//     return view('categories.inex');
+// });
+Route::get('/categories', [CategoryController::class, 'raha']);
+Route::get('/requests', [RequestController::class, 'zahi']);
+Route::resource('/orders', OrderController::class);
