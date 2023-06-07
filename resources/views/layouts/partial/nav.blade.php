@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-waning bg-warning shadow-sm">
+<nav class="navbar navbar-expand-md navbar-black bg-black shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{ config('app.name', 'Book Store') }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                     <a class="nav-link" href="{{url('/categories')}}">{{ __('categories') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('payments') }}</a>
+                    <a class="nav-link" href="{{route('payments.index')}}">{{ __('payments') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('orders.index')}}">{{ __('order') }}</a>
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="{{url('/requests')}}">{{ __('requst') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('users') }}</a>
+                    <a class="nav-link" href="{{url('/users')}}">{{ __('users') }}</a>
                 </li>
                 @endauth
                 @guest
@@ -57,6 +57,18 @@
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
+                            <a class="dropdown-item" href="#">
+                            Sitting
+                         </a>
+                         <a class="dropdown-item" href="#">
+                            account
+                         </a>
+                         <a class="dropdown-item" href="#">
+                            personal information
+                         </a>
+                         <a class="dropdown-item" href="#">
+                           Language
+                         </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf

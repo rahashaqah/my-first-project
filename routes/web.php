@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PaymentsController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +34,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/categories', function () {
 //     return view('categories.inex');
 // });
-Route::get('/categories', [CategoryController::class, 'raha']);
+Route::get('/categories', [CategoryController::class, 'raha'])->name('category.index');
 Route::get('/requests', [RequestController::class, 'zahi']);
 Route::resource('/orders', OrderController::class);
+Route::resource('/users', UsersController::class);
+Route::resource('/payments', PaymentsController::class);
+Route::post('/Category/store',[CategoryController::class,'store'])->name('Category.store');
+Route::post('/Category/update',[CategoryController::class,'update'])->name('Category.update');

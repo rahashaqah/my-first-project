@@ -1,0 +1,11 @@
+
+.bg-img{
+    background:url('../img/32.jpg') no-repeat;
+    background-size: cover;
+    padding: 0% ;
+    margin: 0%;
+    height: 100vh;
+}
+body{
+    background-color: rgb(68, 109, 84);
+}

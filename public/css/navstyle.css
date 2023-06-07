@@ -1,11 +1,13 @@
 .nav-link{
     border-radius: 25px !important;
     padding: 10px !important;
+    color: bisque;
+    text-align: center !important;
 }
 
 .nav-link:hover{
-    background-color: rgb(75, 38, 4);
-    color: rgb(214, 186, 24);
-    box-shadow: 5px 2px 25px hsl(32, 90%, 21%) ,5px 2px 25px #643805;
-    transition: ease-in-out 0.8s;
+    background-color: rgb(52, 170, 185);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 2px 25px hsl(209, 34%, 51%) ,5px 2px 50px rgb(19, 20, 20);
+    transition: ease-in-out 0.5s;
 }
